@@ -1,2 +1,8 @@
+.vscode
 src
+test
+.eslintrc
+yarn.lock
+.travis.yml
+.npmignore
 !out.js

@@ -1,16 +1,23 @@
 language: node_js
 node_js:
-  - "node"
+- node
 sudo: required
 dist: trusty
 before_install:
-  # Repo for Yarn
-  - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -y -qq yarn
+- sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
+- echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+- sudo apt-get update -qq
+- sudo apt-get install -y -qq yarn
 cache:
   directories:
-  - $HOME/.yarn-cache
+  - "$HOME/.yarn-cache"
 install:
-  - yarn install
+- yarn install
+deploy:
+  provider: npm
+  email: i@aka.mn
+  api_key:
+    secure: oAsgy4w2cdpZij3GuGB5vScHzBfj9tn+VDMzf+Ab94KsvrfuuCKcIBlIypB/RIOammObl0u4NkqBuytSjxzoS5uBI39dT23XUfMC6JNzPq4dPJhZ2EfMe85bLotP1D2QEuoscsu4+eSm0IiNP2R0p31cPcfcXwvnmRfG+z6ZAYFX3EkmFV2U5AxDdC/3MJLYe2kASekQ1pw3ncwgoRLS3E+/C0o6/fOL1YLdJHH1pFFRCag4zc01JWn2rKhFUmWPPmCs2mdtlF7gQokPUZOh8oFAO2AHE+4cZ2BIoqm3+BWr5x9H0wW2dNvC2mczSMi49vT2K/Axj+P7c1mbvd1yMSLsuJ+YOmSIKDPl8J2KLmG/8x/w99fr+WJAll+nVVshHfS4UcRXW9jfIEg6qGjXbeAzq2SeoaURFZOU9CyUKlN6bYCIeEeXiyuKKsrLzhLQYiTVq4eLuLHyvOwVHR4ygnAt0Y9NGgp4BvfxKTL5hFrnAGweUeHdOdzCJVfRG262qIGxMVoq7mDubFovsZY20gjtXxRkSZwWEHxuRUFAgj7kQeCJwUoOaPVKnAxHY/duO/vcVR3hKPSpnezWzzEan/dJZ27ZOQO+MQE4/1THpLAPBCIO4Dizv337efdfQ23mqie+yz/f8S64BRAByUQjjg4sxHHb4hn7dcudyfdb/WE=
+  on:
+    tags: true
+    repo: Meeeeow/easy-page-navigation
