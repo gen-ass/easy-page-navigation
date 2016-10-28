@@ -1,4 +1,5 @@
 # Easy Page Navigation
+[![Build Status](https://travis-ci.org/Meeeeow/easy-page-navigation.svg?branch=master)](https://travis-ci.org/Meeeeow/easy-page-navigation)
 
 ## Description
 This module can help you generate a page navigation in one minutes, output can be JSON or HTML.
