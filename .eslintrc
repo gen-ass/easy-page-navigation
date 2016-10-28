@@ -1,0 +1,25 @@
+{
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-undef": "error",
+        "quotes": ["error", "single"],
+        "indent": ["error", 4],
+        "comma-spacing": ["error", { "after": true, "before": false }],
+        "key-spacing": ["error", { "beforeColon": false, "afterColon": true}],
+        "space-infix-ops": ["error"],
+        "space-before-function-paren": ["error", "always"]
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "describe": true,
+        "it": true
+    },
+    "ignore": [
+        "./out.js"
+    ]
+}

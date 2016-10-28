@@ -1,0 +1,35 @@
+{
+  "name": "easy-page-navigation",
+  "version": "1.0.0",
+  "description": "A module to generate page navigation in json or html",
+  "main": "out.js",
+  "scripts": {
+    "test": "npm run babel && mocha test --reporter nyan",
+    "babel": "babel --presets=es2015 --plugins=add-module-exports --minified ./src/lib.js -o out.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Meeeeow/easy-page-navigation.git"
+  },
+  "keywords": [
+    "navigation"
+  ],
+  "author": "invalidtoken",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Meeeeow/easy-page-navigation/issues"
+  },
+  "homepage": "https://github.com/Meeeeow/easy-page-navigation#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "chai": "^3.5.0",
+    "chai-fs": "^1.0.0",
+    "mocha": "^3.1.2",
+    "mocha-eslint": "^3.0.1"
+  },
+  "dependencies": {
+    "html-element": "^2.1.1"
+  }
+}
