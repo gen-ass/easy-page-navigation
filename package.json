@@ -4,7 +4,7 @@
   "description": "A module to generate page navigation in json or html",
   "main": "out.js",
   "scripts": {
-    "test": "npm run babel && mocha test --reporter nyan",
+    "test": "npm run babel && mocha test",
     "babel": "babel --presets=es2015 --plugins=add-module-exports --minified ./src/lib.js -o out.js"
   },
   "repository": {
