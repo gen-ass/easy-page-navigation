@@ -12,7 +12,7 @@ console.log( MyNav.getNavInfo(6) );
 ```
 
 This will print:
-```json
+```js
 {
 	pages:[
 	    { page: 4, isCurrent: false },
@@ -56,7 +56,7 @@ also, you can use `getNavHTML(currentPage)` to generate  it in HTML
 |currentPage|You should know this|
 
 Return:
-```json
+```js
 {
 	pages:[
 	    { page: 4, isCurrent: false },
